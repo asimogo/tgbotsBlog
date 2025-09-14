@@ -33,7 +33,7 @@ const { ctaUrl, newTab } = toRefs(props);
       <h1
         class="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6 text-balance"
       >
-        海外掘金 <span class="text-emerald-600">一站式</span> TG应用平台
+        海外掘金者的<span class="text-emerald-600">一站式</span> TG应用平台
       </h1>
       <p
         class="text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-3xl mx-auto text-pretty"
