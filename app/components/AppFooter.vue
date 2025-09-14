@@ -9,7 +9,7 @@
             >
               <span class="text-white font-bold">TG</span>
             </div>
-            <span class="text-xl font-bold">TG应用宝</span>
+            <span class="text-xl font-bold">TG元宝</span>
           </div>
           <p class="text-slate-400 text-sm">专注TG机器人App开发</p>
         </div>
@@ -65,7 +65,7 @@
       <div
         class="border-t border-slate-800 mt-8 pt-8 text-center text-sm text-slate-400"
       >
-        <p>&copy; 2025 TGBotsApp. 保留所有权利。</p>
+        <p>&copy; 2025 @TG元宝Studio 保留所有权利。</p>
       </div>
     </div>
   </footer>

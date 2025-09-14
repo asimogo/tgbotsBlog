@@ -18,7 +18,7 @@ const open = ref(false);
           </div>
           <div>
             <p class="text-xl font-bold text-slate-900 dark:text-white">
-              TG应用宝
+              TG元宝
             </p>
             <p class="text-xs text-slate-600 dark:text-slate-300">
               专注TG机器人App开发
