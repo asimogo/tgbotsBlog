@@ -10,6 +10,10 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxt/ui'
   ],
+  app: {
+    // For GitHub Pages project sites, the base URL will be set via env
+    baseURL: process.env.NUXT_APP_BASE_URL || '/'
+  },
   // Auto-import components (Nuxt resolves ~/components to app/components in App Dir)
   components: [
     { path: '~/components', pathPrefix: false }
