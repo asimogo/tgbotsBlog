@@ -18,7 +18,7 @@ const { scrollTo } = useSectionScroll();
   >
     <div class="mb-6">
       <img
-        :src="img"
+        :src="useAsset(img)"
         :alt="title"
         :class="[
           'mx-auto rounded-xl',
