@@ -12,7 +12,12 @@ export default defineNuxtConfig({
   ],
   app: {
     // For GitHub Pages project sites, the base URL will be set via env
-    baseURL: process.env.NUXT_APP_BASE_URL || '/'
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
+    head: {
+      title: 'TG元宝',
+      titleTemplate: '%s - TG应用宝',
+      htmlAttrs: { lang: 'zh-CN' }
+    }
   },
   // Auto-import components (Nuxt resolves ~/components to app/components in App Dir)
   components: [
