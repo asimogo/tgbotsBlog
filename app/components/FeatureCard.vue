@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+
 const props = defineProps<{
   id?: string;
   img: string;
@@ -9,6 +11,17 @@ const props = defineProps<{
 }>();
 
 const { scrollTo } = useSectionScroll();
+
+const runtime = useRuntimeConfig()
+const imgSrc = computed(() => {
+  const src = props.img || ''
+  if (!src) return src
+  if (/^(?:https?:)?\/\//.test(src) || src.startsWith('data:')) return src
+  const base = (runtime.app?.baseURL ?? '/') as string
+  const normalizedBase = base.endsWith('/') ? base.slice(0, -1) : base
+  const normalizedSrc = src.startsWith('/') ? src.slice(1) : src
+  return `${normalizedBase}/${normalizedSrc}`
+})
 </script>
 
 <template>
@@ -18,7 +31,7 @@ const { scrollTo } = useSectionScroll();
   >
     <div class="mb-6">
       <img
-        :src="useAsset(img)"
+        :src="imgSrc"
         :alt="title"
         :class="[
           'mx-auto rounded-xl',
