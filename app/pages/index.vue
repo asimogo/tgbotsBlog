@@ -1,15 +1,13 @@
-<script setup lang="ts">
-const { data: home } = await useAsyncData(() =>
-  queryCollection("content").path("/").first(),
-);
-
-useSeoMeta({
-  title: home.value?.title,
-  description: home.value?.description,
-});
-</script>
-
 <template>
-  <ContentRenderer v-if="home" :value="home" />
-  <div v-else>Home not found</div>
+  <div>
+    <HeroSection />
+
+    <!-- 三大模块卡片（各自具备锚点 id） -->
+    <FeaturesSection />
+
+    <!-- 统计 -->
+    <StatsSection class="mt-0" />
+
+    <!-- 预留工具锚点（占位内容，可后续替换） -->
+  </div>
 </template>
