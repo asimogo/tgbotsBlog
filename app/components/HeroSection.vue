@@ -2,7 +2,7 @@
 const props = withDefaults(
   defineProps<{ ctaUrl?: string; newTab?: boolean }>(),
   {
-    ctaUrl: "#tools",
+    ctaUrl: "https://t.me/tgbotsapp",
     newTab: false,
   },
 );
@@ -18,8 +18,8 @@ const { ctaUrl, newTab } = toRefs(props);
           :target="newTab ? '_blank' : undefined"
           :rel="newTab ? 'noopener noreferrer' : undefined"
           class="inline-block focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-300/50 rounded-full group"
-          aria-label="打开链接"
-          title="打开链接"
+          aria-label="订阅TG元宝频道"
+          title="订阅TG元宝频道"
         >
           <div
             class="logo-breath mx-auto w-28 h-28 md:w-36 md:h-36 bg-emerald-500 rounded-full shadow-lg flex items-center justify-center transition-transform group-hover:scale-105"
