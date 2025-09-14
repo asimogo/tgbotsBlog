@@ -15,7 +15,11 @@ export default defineNuxtConfig({
     baseURL: process.env.NUXT_APP_BASE_URL || '/',
     head: {
       title: 'TG元宝',
-      titleTemplate: '%s - TG应用宝',
+      titleTemplate: (t?: string) => {
+        const site = 'TG元宝'
+        const sub = '海外掘金一站式 TG应用平台'
+        return t && t !== site ? `${t} - ${site} · ${sub}` : `${site} · ${sub}`
+      },
       htmlAttrs: { lang: 'zh-CN' }
     }
   },
