@@ -18,10 +18,10 @@ const open = ref(false);
           </div>
           <div>
             <p class="text-xl font-bold text-slate-900 dark:text-white">
-              TG元宝
+              TG元宝Studio
             </p>
             <p class="text-xs text-slate-600 dark:text-slate-300">
-              专业开发TG机器人
+              专业开发TG机器人App
             </p>
           </div>
         </NuxtLink>

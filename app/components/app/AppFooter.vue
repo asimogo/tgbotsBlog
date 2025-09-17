@@ -9,9 +9,9 @@
             >
               <span class="text-white font-bold">TG</span>
             </div>
-            <span class="text-xl font-bold">TG大玩家</span>
+            <span class="text-xl font-bold">TG元宝Studio</span>
           </div>
-          <p class="text-slate-400 text-sm">专注TG机器人App开发</p>
+          <p class="text-slate-400 text-sm">专业开发TG机器人App</p>
         </div>
         <div
           class="grid grid-cols-2 gap-8 md:col-span-3 md:grid-cols-3 md:gap-10"
@@ -56,7 +56,7 @@
       <div
         class="border-t border-slate-800 mt-8 pt-8 text-center text-sm text-slate-400"
       >
-        <p>&copy; 2025 @TG元宝Studio 保留所有权利。</p>
+        <p>&copy; 2025 @TG元宝 Studio 保留所有权利。</p>
       </div>
     </div>
   </footer>
