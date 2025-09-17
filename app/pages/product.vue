@@ -1,4 +1,13 @@
 <script setup lang="ts">
+const runtimeConfig = useRuntimeConfig();
+const appBaseURL = runtimeConfig.app?.baseURL || '/';
+
+const withBase = (path: string) => {
+  const normalizedBase = appBaseURL.endsWith('/') ? appBaseURL : `${appBaseURL}/`;
+  const normalizedPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${normalizedBase}${normalizedPath}`;
+};
+
 const products = [
   {
     id: 1,
@@ -9,7 +18,7 @@ const products = [
     monthlyPrice: "$50",
     yearlyPrice: "$600",
     features: ["路径规划", "实时计算营业额", "多种收款方式"],
-    image: "/image/product/takeaway.png",
+    image: withBase("image/product/takeaway.png"),
     category: "机器人",
     hot: true,
   },
@@ -23,7 +32,7 @@ const products = [
     monthlyPrice: "$30",
     yearlyPrice: "$360",
     features: ["精准识别", "灵活配置"],
-    image: "/image/product/manager.png",
+    image: withBase("image/product/manager.png"),
     category: "机器人",
     hot: true,
   },
@@ -37,7 +46,7 @@ const products = [
     monthlyPrice: "$4000起",
     yearlyPrice: "$40000",
     features: ["专业交易", "策略支持", "自动执行"],
-    image: "/image/product/crypto.png",
+    image: withBase("image/product/crypto.png"),
     category: "机器人",
     hot: false,
   },
@@ -50,7 +59,7 @@ const products = [
     monthlyPrice: "Free",
     yearlyPrice: "Free",
     features: ["免费", "丝滑聊天"],
-    image: "/image/product/assistant.png",
+    image: withBase("image/product/assistant.png"),
     category: "机器人",
     hot: true,
   },
@@ -63,7 +72,7 @@ const products = [
     monthlyPrice: "$30",
     yearlyPrice: "$360",
     features: ["AI算法", "坚固无比"],
-    image: "/image/product/verify.png",
+    image: withBase("image/product/verify.png"),
     category: "机器人",
     hot: true,
   },
