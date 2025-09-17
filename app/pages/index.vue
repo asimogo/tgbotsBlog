@@ -7,7 +7,5 @@
 
     <!-- 统计 -->
     <StatsSection class="mt-0" />
-
-    <!-- 预留工具锚点（占位内容，可后续替换） -->
   </div>
 </template>

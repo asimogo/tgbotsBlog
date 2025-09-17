@@ -14,8 +14,8 @@ export default defineNuxtConfig({
     // For GitHub Pages project sites, the base URL will be set via env
     baseURL: process.env.NUXT_APP_BASE_URL || '/',
     head: {
-      title: 'TG元宝',
-      titleTemplate: '%s - 海外掘金一站式TG应用平台',
+      title: 'TG大玩家',
+      titleTemplate: '%s - 玩转各种TG机器人',
       htmlAttrs: { lang: 'zh-CN' },
       link: [
         {

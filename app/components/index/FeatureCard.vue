@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed } from "vue";
 
 const props = defineProps<{
   id?: string;
@@ -10,18 +10,16 @@ const props = defineProps<{
   large?: boolean;
 }>();
 
-const { scrollTo } = useSectionScroll();
-
-const runtime = useRuntimeConfig()
+const runtime = useRuntimeConfig();
 const imgSrc = computed(() => {
-  const src = props.img || ''
-  if (!src) return src
-  if (/^(?:https?:)?\/\//.test(src) || src.startsWith('data:')) return src
-  const base = (runtime.app?.baseURL ?? '/') as string
-  const normalizedBase = base.endsWith('/') ? base.slice(0, -1) : base
-  const normalizedSrc = src.startsWith('/') ? src.slice(1) : src
-  return `${normalizedBase}/${normalizedSrc}`
-})
+  const src = props.img || "";
+  if (!src) return src;
+  if (/^(?:https?:)?\/\//.test(src) || src.startsWith("data:")) return src;
+  const base = (runtime.app?.baseURL ?? "/") as string;
+  const normalizedBase = base.endsWith("/") ? base.slice(0, -1) : base;
+  const normalizedSrc = src.startsWith("/") ? src.slice(1) : src;
+  return `${normalizedBase}/${normalizedSrc}`;
+});
 </script>
 
 <template>
@@ -37,7 +35,7 @@ const imgSrc = computed(() => {
           'mx-auto rounded-xl',
           props.large
             ? 'w-32 h-32 md:w-40 md:h-40'
-            : 'w-24 h-24 md:w-28 md:h-28'
+            : 'w-24 h-24 md:w-28 md:h-28',
         ]"
       />
     </div>
@@ -50,13 +48,12 @@ const imgSrc = computed(() => {
       {{ text }}
     </p>
     <div class="text-center">
-      <a
-        :href="`#${target}`"
+      <NuxtLink
+        :to="target"
         class="inline-block bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
-        @click.prevent="scrollTo(target)"
       >
         点击访问
-      </a>
+      </NuxtLink>
     </div>
   </div>
 </template>

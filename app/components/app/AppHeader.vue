@@ -10,7 +10,7 @@ const open = ref(false);
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <!-- Logo -->
-        <div class="flex items-center space-x-3">
+        <NuxtLink to="/" class="flex items-center space-x-3 cursor-pointer">
           <div
             class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center"
           >
@@ -21,10 +21,10 @@ const open = ref(false);
               TG元宝
             </p>
             <p class="text-xs text-slate-600 dark:text-slate-300">
-              专注TG机器人App开发
+              专业开发TG机器人
             </p>
           </div>
-        </div>
+        </NuxtLink>
 
         <!-- Desktop Nav -->
         <nav class="hidden md:flex items-center space-x-6">

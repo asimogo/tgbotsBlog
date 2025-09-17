@@ -5,21 +5,21 @@ const cards = [
     img: "/product-introduction.jpg",
     title: "产品简介",
     text: "精选 TG 机器人和 Mini Apps",
-    target: "product",
+    target: "/product",
   },
   {
     id: "knowledge",
     img: "/share-knowledge.jpg",
     title: "知识库",
     text: "分享一些 TG 机器人搭建教程",
-    target: "knowledge",
+    target: "/knowledge",
   },
   {
     id: "tutorials",
     img: "/guide-illustration.jpg",
     title: "教程",
     text: "各种软件/服务/工具的使用教程",
-    target: "tutorials",
+    target: "/tutorials",
   },
 ];
 </script>
